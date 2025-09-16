@@ -1,0 +1,119 @@
+
+:root {
+    --cor-primaria: #185A9D; --cor-secundaria: #8CB381; --cor-destaque: #F4E02C;
+    --cor-fundo: #F8F9FA; --cor-texto: #343A40; --branco: #FFFFFF;
+}
+
+.logo-principal {
+    max-width: 150px;
+    margin-bottom: 1rem;
+}
+
+.container { width: 90%; max-width: 1200px; margin: 0 auto; }
+.main-header { background-color: var(--branco); padding: 1rem 0; border-bottom: 1px solid #eee; }
+.main-header .container { display: flex; justify-content: space-between; align-items: center; }
+.logo-link { display: flex; align-items: center; text-decoration: none; color: var(--cor-texto); font-weight: bold; font-size: 1.5rem; }
+.header-logo { max-height: 40px; margin-right: 10px; }
+.main-header nav a { margin-left: 20px; text-decoration: none; color: var(--cor-primaria); }
+main.container { padding: 2rem 0; }
+.main-footer { text-align: center; padding: 2rem 0; background-color: var(--cor-fundo); border-top: 1px solid #eee; margin-top: 2rem; }
+
+/* Formulários */
+.form-container { max-width: 500px; margin: 2rem auto; padding: 2rem; background: var(--branco); border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.form-container h2 { text-align: center; color: var(--cor-primaria); }
+.form-container p { text-align: center; margin-bottom: 1.5rem; }
+.form-container label { display: block; margin-bottom: 5px; font-weight: bold; }
+.form-container input { width: 100%; padding: 12px; margin-bottom: 1rem; border: 1px solid #ccc; border-radius: 4px; }
+.form-container button { width: 100%; padding: 15px; border: none; background: var(--cor-primaria); color: var(--branco); font-size: 1rem; border-radius: 4px; cursor: pointer; }
+.form-link { text-align: center; margin-top: 1rem; }
+
+/* Cards */
+.card { background: var(--branco); padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 1rem; }
+.btn { display: inline-block; background-color: var(--cor-primaria); color: var(--branco); padding: 10px 20px; text-decoration: none; border-radius: 4px; }
+
+/* Listagem de Produtos */
+.product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+.product-card { text-align: center; }
+.product-card img { max-width: 100%; border-radius: 8px; margin-bottom: 1rem; }
+.product-card h3 { margin: 0.5rem 0; }
+.product-card .price { font-weight: bold; color: var(--cor-secundaria); }
+
+/* --- Estilos para a Página de Listagem de Produtos --- */
+
+.page-container {
+    padding: 1rem 0;
+}
+
+.page-container h1 {
+    text-align: center;
+    color: var(--cor-primaria);
+    margin-bottom: 0.5rem;
+}
+
+.page-subtitle {
+    text-align: center;
+    color: var(--cor-texto);
+    margin-top: 0;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+}
+
+.product-grid {
+    display: grid;
+    /* Cria colunas responsivas: elas terão no mínimo 280px, 
+       e o navegador tentará encaixar o máximo que puder na linha. */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem; /* Espaçamento entre os cards */
+}
+
+.product-card {
+    background-color: var(--branco);
+    border: 1px solid #eee;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: contain; /* Garante que a imagem caiba sem distorcer */
+    margin-bottom: 1.5rem;
+}
+
+.product-card h3 {
+    font-size: 1.2rem;
+    color: var(--cor-texto);
+    /* Garante que o card cresça para preencher o espaço */
+    flex-grow: 1; 
+}
+
+.product-description {
+    font-size: 0.9rem;
+    color: #777;
+    margin: 0.5rem 0;
+    flex-grow: 1;
+}
+
+.product-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--cor-secundaria); /* Usa a cor verde */
+    margin: 1rem 0;
+}
+
+.product-card .btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
